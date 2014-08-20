@@ -1,5 +1,7 @@
 #!/usr/bin/perl -w
 # Source File : update_daily_records.pl
+# Begun : 2014
+# Latest Revision : August 19, 2014
 #
 # Copyright (C) 2014 John B. Rosheck, Jr.
 #

@@ -21,6 +21,8 @@
 use strict;
 use Time::Local;
 
+my $base = "/home/web";
+
 if (!defined($ARGV[0])) {
   print "ERROR - must supply a prefix\n";
   exit(1);
@@ -28,7 +30,7 @@ if (!defined($ARGV[0])) {
 my $prefix;
 $prefix = $ARGV[0];
 
-my $rrd_filepath= "/home/web/data/rrd/" . $prefix . ".rrd";
+my $rrd_filepath= $base . "/data/rrd/" . $prefix . ".rrd";
 
 my $sample_cnt=0;
 my $stepsize = 1; # how many seconds between samples

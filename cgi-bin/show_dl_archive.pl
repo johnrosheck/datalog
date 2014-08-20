@@ -24,12 +24,13 @@ my $prefix;
 
 $prefix = find_prefix(); # from the running program's file name
 
-my $base = "/home/web/html";
+my $base = "/home/web";
+my $htmlbase = $base . "/html";
 my $img_ref = "/datalog/images";
 my $wrap_ref = "/datalog/wrappers";
-my $img_dir = $base . $img_ref;
-my $wrap_dir = $base . $wrap_ref;
-my $report_dir = "/home/web/data/datalog";
+my $img_dir = $htmlbase . $img_ref;
+my $wrap_dir = $htmlbase . $wrap_ref;
+my $report_dir = $base . "/data/datalog";
 
 print "Content-type: text/html\n\n";
 
