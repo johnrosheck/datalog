@@ -1,0 +1,9 @@
+
+PIC assembly language programs for the 14 pin PIC 16F688 device.
+
+reporter-4ach-4dig.asm - Programs the chip for 4 analog input pins and 4
+digital I/O pins.
+
+reporter-8ach-1dig.asm - Programs the chip for 8 analog input pins and 1
+digital I/O pin.
+

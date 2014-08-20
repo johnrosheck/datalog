@@ -1,0 +1,13 @@
+# form file for week with size 320 wide
+RRD=/home/web/data/rrd/dl.rrd
+DATADESC=/home/web/data/rrd/dl.desc
+PREFIX=dl
+IMAGEPREFIX=dl-sm-wk-
+TITLE=Datalog Temperatures
+IMAGEDIR=/home/web/html/datalog/images
+HEIGHT=120
+WIDTH=800
+TIMERANGE=7d
+UPPERLIMIT=120
+LOWERLIMIT=0
+CHANNELS=1,2,3,4,5,6

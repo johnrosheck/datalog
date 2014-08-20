@@ -1,0 +1,5 @@
+
+This directory contains a series of lower directories containing code to
+allow various different processors/platforms to collect data and stream it
+out a serial port.  These devices send data to a collection program where
+it is stored and accessible to graphical display scripts.

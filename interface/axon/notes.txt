@@ -1,0 +1,27 @@
+
+notes.txt
+6 May 2006
+
+Now called axon, was new_comm, originally pu_comm
+
+axon provides the linkage from the standard linux console I/O and/or
+stdio to a remote microprocessor running a monitor program.  The big
+addition of this package is the ability to run completely in batch mode
+with stdio interfaces to other processes.  The program download and
+execution will be the biggest part of this.
+
+Example command line :
+
+$ axon -l logfile -p microprogram -x datalogger_program -n -dN /dev/ttyS0
+
+means :
+  -l = log interaction to file called 'logfile'
+  -p = download and execute program 'microprogram' to remote microprocessor
+  -x = after program is executed, execute 'datalogger_program' and pass
+       stdio to it from the serial connection to the remote microprocessor
+  -n = go into the background and send programs stdio to the bit bucket
+  -dN = print more information to the logging file (at level N)
+  /dev/ttyS0 = serial port to use (always specified)
+
+
+  

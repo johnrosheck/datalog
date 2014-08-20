@@ -1,0 +1,18 @@
+
+This directory contains specific data collection programs and a directory
+(senders) that contains code for the remote devices that feed these
+programs.
+
+Sub-directories:
+
+  get_resp - basic logging program.  Parks itself on a serial port listening
+    for data then logs it appropiately.
+
+  cmd_resp - basic logging program with the ability to send simple commands
+    back to the remote device.
+
+  axon - provides an interactive connection to a remote node via the serial
+    port.
+
+  senders - a directory containing various codes for making the appropiate
+    remote data collection and sending nodes.
