@@ -1,0 +1,101 @@
+
+datalog
+-------
+
+Copyright (C) 2006 - 2014 John B. Rosheck, Jr.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+Overview
+--------
+
+This software package contains various programs and scripts that can be
+used to construct a fully functional data logging system with a web
+interface for monitoring.
+
+This system consists of three major functional parts:
+1. Data acquisition programs - reads raw data from a some port then
+   converts it and applies calibration information.  It then stores this
+   information in an easily readable date coded file.  Any programs filling
+   this need are located under the interface directory.
+2. Data presentation program - follows the incoming data file from a
+   particular port and loads a round-robin database (specifically rrdtool)
+   specially formatted for rapid graphing.  It also generates small graphs
+   so that they are always up to date.  This program is found under the
+   datalog directory.
+3. Web interface - consists of a main data logging index file which will
+   show the latest readings in a table along with the current day and week
+   graph.  Historical weekly data graphs are viewable from a link on that page.
+   Each of the historical graphs can be clicked on to produce a large graph
+   and drill into each day's data with a click on the data for that day.
+
+
+Installation
+------------
+
+The data flow through this software starts at a specific port that can
+gather multiple channels of data.  This data is continuously recorded
+in a round-robin database.  After that, it can be displayed graphically
+in multiple ways.
+
+The software expects to be untarred in the base directory of a normal 
+apache web server directory tree.  That is, the one containing the html
+and cgi-bin directories.  By default, this system expects to be located
+in the directory /home/web and this path is used throughout and 
+the name 'dl' (datalog) is used as a prefix to several data and log files.
+
+A signicant portion of all the scripts will need to be modified to fit the
+system this is installed on.  Details of the file changes required can be
+found in the INSTALL file.
+
+Usage
+-----
+
+This system is complete and should be able to start up whenever the system
+comes up using the scripts provided.  Multiple file changes are required
+to use more than one data source.  These details are outlined in the INSTALL
+documentation.
+
+This software package contains various programs and scripts that can be
+used to construct a fully functional data logging system with a web
+interface for monitoring.
+
+  Notes:
+  1. Any interface program will take over its specified port.  Any other
+     program needing to use that port to load and run a program on the
+     remote system will need to do so before it starts.  The interface
+     programs will align to the incoming stream by waiting for a newline
+     before starting to process data.
+
+  2. The base system will be continually searching for a /dev/sda.  If it
+     finds one, it will partition it and put everything in partition 1
+     then expand the root file system into it.  Once done, all the 
+     associated files to mount it as root will be made.  Upon the next
+     reboot, the system will expect to put root on that drive.
+
+
+
+Reference
+---------
+
+The latest version of the software along with other reference material
+may be found at:
+
+http://johnrosheck.github.com/datalog/
+
+I can be reached via email at:
+
+john.rosheck@gmail.com
+
