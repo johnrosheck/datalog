@@ -1,7 +1,7 @@
 /*
  * Source File : main.c
  * Begun : 22 April 2012
- * Latest Revision : 2 June 2012
+ * Latest Revision : 26 August 2014
  * Version : 0.1
  *
  * This program continually reads the analog input ports and writes
@@ -129,7 +129,7 @@ void do_main_loop(void) {
   show_word(counter);
   uart_send(' ');
   for (i=0;i<6;i++) {
-    show_number(adc_data[i]);
+    show_word(adc_data[i]);
     uart_send(' ');
   }
   uart_send('\n');

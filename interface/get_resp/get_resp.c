@@ -1,7 +1,7 @@
 /*
  * Source File : get_resp.c
  * Begun : November 20, 2005
- * Latest Revision : June 14, 2014
+ * Latest Revision : August 26, 2014
  * Version : 0.1
  *
  * This program listens to communications from a serial port and collects
@@ -672,7 +672,7 @@ int my_fgets(char *buf, int maxsize, int fd) {
     maxsize--;
     if ((c == '\n') || (maxsize == 0)) {
       *p = 0;
-      printf("got line - \"%s\"\n", buf);
+      /* printf("got line - \"%s\"\n", buf); */
       return(1);
     }
   }

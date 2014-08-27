@@ -1,7 +1,7 @@
 /*
  * Source File : analog.c
  * Begun : 12 October 2013
- * Latest Revision : 13 July 2014
+ * Latest Revision : 26 August 2014
  * Version : 0.1
  *
  * Provides routines to access the analog data converter for all six 
@@ -39,12 +39,10 @@ uint16_t adc_data[6];
 
 void do_averaging_and_conversion(void) {
   uint8_t i;
-  double d;
+  uint16_t d;
   for (i=0;i<6;i++) {
     d = accum[i];
-    d /= AVERAGE_CNT;
-    d *= 5000.0;
-    d /= 1024.0;
+    d >>= 6; /* do divide by 64 */
     adc_data[i] = d;
     accum[i] = 0;
   }
@@ -61,7 +59,7 @@ uint8_t do_adc_loop(void) {
     if (accum_cnt >= AVERAGE_CNT) { /* prep values */
       do_averaging_and_conversion();
       start_conversion(cur_adc_chan);
-      return(0xff); /* signal new averaged values */
+      return(0xaa); /* signal new averaged values */
     }
   }
   start_conversion(cur_adc_chan);

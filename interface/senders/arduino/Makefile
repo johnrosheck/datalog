@@ -1,7 +1,7 @@
 #
 # Source File : Makefile
 # Begun : 22 April 2012
-# Latest Revision : July 22, 2014
+# Latest Revision : August 26, 2014
 # Version : 1.00
 #
 # Copyright (C) 2012-2014 John B. Rosheck, Jr.
@@ -50,4 +50,4 @@ cleanbin:
 	rm -f $(OBJS)
 
 burn:
-	avrdude -c arduino -p ATMEGA328P -P /dev/ttyACM1 -b 115200 -U flash:w:test.hex
+	avrdude -c arduino -p ATMEGA328P -P /dev/ttyACM0 -b 115200 -U flash:w:test.hex
