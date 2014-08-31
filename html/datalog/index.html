@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+<!--
+Source File : index.html
+Begun : 26 November 2011
+
+Example index.html file for the datalog interface.  Includes server-side
+includes for showing the current and historical data logs.
+
+Copyright (C) 2011 John B. Rosheck, Jr.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<HEAD>
+<TITLE>Datalog Monitoring</TITLE>
+</HEAD>
+<BODY>
+<HR>
+<HR>
+
+<H1 ALIGN="CENTER">Datalog Monitoring</H1>
+
+<HR>
+<HR>
+
+<TABLE><TR>
+<TD WIDTH="50%">
+<H4 ALIGN="LEFT"><A HREF="#CURRENT_INFO">Current Information</A></H4>
+</TD>
+<!--
+<TD WIDTH="50%">
+<H4 ALIGN="RIGHT"><A HREF="/cgi-bin/change_settings">Change Settings</A></H4>
+</TD>
+-->
+</TR></TABLE>
+
+<H2>Introduction</H2>
+<P>
+This page shows the results of the logged data.  Descriptions of the sensors
+are included below.<BR>
+<BLOCKQUOTE>
+<UL>
+<LI>Channel 1 <FONT COLOR="#007F00">(Dark Green)</FONT><P>
+Channel 1 is displayed in this color.
+</P></LI>
+<LI>Channel 2 <FONT COLOR="#00FF00">(Light Green)</FONT><P>
+Channel 2 is displayed in this color.
+</P></LI>
+<LI>Channel 3 <FONT COLOR="#0000FF">(Blue)</FONT><P>
+Channel 3 is displayed in this color.
+</P></LI>
+<LI>Channel 4 <FONT COLOR="#FF0000">(Red)</FONT><P>
+Channel 4 is displayed in this color.
+</P></LI>
+<LI>Channel 5 <FONT COLOR="#FF7F4F">(Orange)</FONT><P>
+Channel 5 is displayed in this color.
+</P></LI>
+<LI>Channel 6 <FONT COLOR="#5F5F5F">(Dark Gray)</FONT><P>
+Channel 6 is displayed in this color.
+</P></LI>
+<LI>Channel 7 <FONT COLOR="#FFFF00">(Yellow)</FONT><P>
+Channel 7 is displayed in this color.
+</P></LI>
+<LI>Channel 8 <FONT COLOR="#FF00FF">(Cyan)</FONT><P>
+Channel 8 is displayed in this color.
+</P></LI>
+</UL>
+</BLOCKQUOTE>
+
+</P>
+
+
+<HR>
+<A NAME="CURRENT_INFO"></A>
+<B><I>Note: Cir 17 and 23 were flipped as of approximately 5:30pm Saturday March 24, 2012
+The reading as of the week of 3/25/2012 should be correctly labeled.</I></B>
+
+<!--#include virtual="/cgi-bin/datalog/dl-current-state.shtml" -->
+
+<P ALIGN="CENTER"><B>Click graphs for expanded view</B></P>
+
+<!--#include virtual="/cgi-bin/datalog/dl-history-state.shtml" -->
+
+<HR>
+
+</BODY>
+</HTML>
+

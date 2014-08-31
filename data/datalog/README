@@ -1,0 +1,5 @@
+
+This directory contains the data files recorded by any of the various
+non-sender programs located in the interface directory.  The file name
+format is usually prefix-YYYYMMDD.log.  Entries are updated each second
+and the file automatically moves to the next day at midnight.
